@@ -5,7 +5,7 @@
 
     <groupId>net.osslabz</groupId>
     <artifactId>bitcoin-commons</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Allows to decode raw input data from an EVM smart contract call (on Ethereum or a compatible chain like
