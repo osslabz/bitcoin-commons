@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.osslabz</groupId>
+    <artifactId>bitcoin-commons</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <osslabz.encoding>UTF-8</osslabz.encoding>
+        <osslabz.java.version>17</osslabz.java.version>
+
+        <project.build.sourceEncoding>${osslabz.encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${osslabz.encoding}</project.reporting.outputEncoding>
+
+        <maven.compiler.source>${osslabz.java.version}</maven.compiler.source>
+        <maven.compiler.target>${osslabz.java.version}</maven.compiler.target>
+        <maven.compiler.release>${osslabz.java.version}</maven.compiler.release>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Raphael Vullriede</name>
+            <email>raphael@osslabz.net</email>
+            <organization>osslabz.net</organization>
+            <organizationUrl>http://www.osslabz.net</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:ssh://git@github.com/osslabz/bitcoin-commons.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/osslabz/bitcoin-commons.git</developerConnection>
+        <url>https://github.com/osslabz/bitcoin-commons</url>
+        <tag>main</tag>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.bitcoinj</groupId>
+            <artifactId>bitcoinj-core</artifactId>
+            <version>0.16.2</version>
+        </dependency>
+        <!-- the protobuf-javalite version pulled by bitcoinj-core.0.16.2 contains a vulnerability -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-javalite</artifactId>
+            <version>3.19.6</version>
+        </dependency>
+
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- default logging impl for tests -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.7</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
