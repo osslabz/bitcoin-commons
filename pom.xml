@@ -61,7 +61,7 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-javalite</artifactId>
-            <version>3.25.0</version>
+            <version>3.25.1</version>
         </dependency>
 
         <!-- logging -->
