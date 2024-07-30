@@ -55,7 +55,7 @@
         <dependency>
             <groupId>org.bitcoinj</groupId>
             <artifactId>bitcoinj-core</artifactId>
-            <version>0.16.2</version>
+            <version>0.16.3</version>
         </dependency>
         <!-- the protobuf-javalite version pulled by bitcoinj-core.0.16.2 contains a vulnerability -->
         <dependency>
