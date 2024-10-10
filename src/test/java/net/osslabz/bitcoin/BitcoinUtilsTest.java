@@ -12,5 +12,9 @@ public class BitcoinUtilsTest {
         // examples taken from https://electrumx.readthedocs.io/en/latest/protocol-basics.html#script-hashes
         String reversedScriptHash = BitcoinUtils.convertAddressToReversedScriptHash(Network.MAIN_NET, "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa");
         assertEquals("8b01df4e368ea28f8dc0423bcf7a4923e3a12d307c875e47a0cfbf90b5c39161", reversedScriptHash);
+
+
+        String reversedScriptHashSegwit = BitcoinUtils.convertAddressToReversedScriptHash(Network.MAIN_NET, "bc1q788qxdqmvc2etnd8pv29cnv7l9ap78glqen8mk");
+        assertEquals("8b01df4e368ea28f8dc0423bcf7a4923e3a12d307c875e47a0cfbf90b5c39161", reversedScriptHashSegwit);
     }
 }

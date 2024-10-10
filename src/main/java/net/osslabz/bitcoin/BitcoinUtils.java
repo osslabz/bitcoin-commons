@@ -1,13 +1,14 @@
 package net.osslabz.bitcoin;
 
-import java.util.HexFormat;
-import java.util.Objects;
 import org.bitcoinj.core.Address;
 import org.bitcoinj.core.Sha256Hash;
 import org.bitcoinj.script.Script;
 import org.bitcoinj.script.ScriptBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.HexFormat;
+import java.util.Objects;
 
 public class BitcoinUtils {
 
@@ -30,10 +31,14 @@ public class BitcoinUtils {
 
     public static String convertAddressToReversedScriptHash(Address address) {
 
-        Script outputScript = ScriptBuilder.createOutputScript(address);
+        Script outputScript = toOutputScript(address);
         byte[] sha256 = Sha256Hash.hash(outputScript.getProgram());
         byte[] reversed = reverseBytes(sha256);
         return HexFormat.of().formatHex(reversed);
+    }
+
+    public static Script toOutputScript(Address address) {
+        return ScriptBuilder.createOutputScript(address);
     }
 
 
