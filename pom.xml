@@ -4,7 +4,7 @@
 
     <groupId>net.osslabz</groupId>
     <artifactId>bitcoin-commons</artifactId>
-    <version>0.2.16-SNAPSHOT</version>
+    <version>0.2.17-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>This package decouples my bitcoin related libraries from the underlying implementation although it
@@ -20,11 +20,11 @@
         <project.build.sourceEncoding>${osslabz.encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${osslabz.encoding}</project.reporting.outputEncoding>
 
-        <project.build.outputTimestamp>2025-03-17T08:20:54Z</project.build.outputTimestamp>
+        <project.build.outputTimestamp>2025-04-23T19:14:26Z</project.build.outputTimestamp>
 
         <maven.compiler.release>${osslabz.java.version}</maven.compiler.release>
 
-        <lombok.version>1.18.36</lombok.version>
+        <lombok.version>1.18.38</lombok.version>
     </properties>
 
     <licenses>
@@ -70,14 +70,14 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.12.1</version>
+            <version>5.12.2</version>
             <scope>test</scope>
         </dependency>
         <!-- default logging impl for tests -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.5.17</version>
+            <version>1.5.18</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
