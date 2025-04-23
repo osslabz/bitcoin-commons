@@ -4,7 +4,7 @@
 
     <groupId>net.osslabz</groupId>
     <artifactId>bitcoin-commons</artifactId>
-    <version>0.2.16</version>
+    <version>0.2.17-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>This package decouples my bitcoin related libraries from the underlying implementation although it
@@ -20,7 +20,7 @@
         <project.build.sourceEncoding>${osslabz.encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${osslabz.encoding}</project.reporting.outputEncoding>
 
-        <project.build.outputTimestamp>2025-04-23T19:14:04Z</project.build.outputTimestamp>
+        <project.build.outputTimestamp>2025-04-23T19:14:26Z</project.build.outputTimestamp>
 
         <maven.compiler.release>${osslabz.java.version}</maven.compiler.release>
 
@@ -47,7 +47,7 @@
         <connection>scm:git:https://github.com/osslabz/bitcoin-commons.git</connection>
         <developerConnection>scm:git:https://github.com/osslabz/bitcoin-commons.git</developerConnection>
         <url>https://github.com/osslabz/bitcoin-commons</url>
-        <tag>0.2.16</tag>
+        <tag>main</tag>
     </scm>
 
     <dependencies>
