@@ -1,36 +1,27 @@
 package net.osslabz.bitcoin;
 
-import java.util.Arrays;
-import java.util.Objects;
-import org.bitcoinj.core.NetworkParameters;
+import org.bitcoinj.base.BitcoinNetwork;
 
 public enum Network {
 
 
-    MAIN_NET(NetworkParams.NETWORK_PARAMETERS_MAIN_NET),
+    MAIN_NET(BitcoinNetwork.MAINNET),
 
 
-    REG_NET(NetworkParams.NETWORK_PARAMETERS_REG_NET),
+    REG_NET(BitcoinNetwork.REGTEST),
 
 
-    TEST_NET(NetworkParams.TESTNET_PARAMETERS_TEST_NET);
+    TEST_NET(BitcoinNetwork.TESTNET);
 
 
-    private final NetworkParameters networkParameters;
+    private final BitcoinNetwork bitcoinNetwork;
 
 
-    Network(NetworkParameters networkParameters) {
-        this.networkParameters = networkParameters;
+    Network(BitcoinNetwork bitcoinNetwork) {
+        this.bitcoinNetwork = bitcoinNetwork;
     }
 
-
-    public NetworkParameters getNetworkParameters() {
-        return networkParameters;
-    }
-
-
-    public static Network fromNetworkParameters(NetworkParameters networkParameters) {
-        Objects.requireNonNull(networkParameters, "networkParameters must not be null");
-        return Arrays.stream(Network.values()).filter(n -> n.networkParameters.getId().equals(networkParameters.getId())).findAny().orElseThrow();
+    BitcoinNetwork getBitcoinNetwork() {
+        return bitcoinNetwork;
     }
 }
