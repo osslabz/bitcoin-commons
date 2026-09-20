@@ -31,7 +31,7 @@ jobs:
       - name: set-snapshot-version
         uses: osslabz/github-actions/snapshot-version@v1
         with:
-          default-branch: main
+          default-branch: dev
 
       # Snapshots publish from the integration branch only; `main` publishes releases through
       # build-release-on-main-push. Central's publishing limits harden on 2026-10-01 and
