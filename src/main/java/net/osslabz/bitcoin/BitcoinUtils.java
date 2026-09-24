@@ -7,12 +7,8 @@ import org.bitcoinj.base.AddressParser;
 import org.bitcoinj.base.Sha256Hash;
 import org.bitcoinj.script.Script;
 import org.bitcoinj.script.ScriptBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class BitcoinUtils {
-
-    private static final Logger log = LoggerFactory.getLogger(BitcoinUtils.class);
 
     private BitcoinUtils() {}
 
