@@ -8,7 +8,7 @@ import org.bitcoinj.base.Sha256Hash;
 import org.bitcoinj.script.Script;
 import org.bitcoinj.script.ScriptBuilder;
 
-public class BitcoinUtils {
+public final class BitcoinUtils {
 
     private BitcoinUtils() {}
 
