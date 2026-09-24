@@ -33,6 +33,8 @@ public final class BitcoinUtils {
         return ScriptBuilder.createOutputScript(address);
     }
 
+    // Public API: callers get null back for null, an empty array would change that contract.
+    @SuppressWarnings("PMD.ReturnEmptyCollectionRatherThanNull")
     public static byte[] reverseBytes(byte[] array) {
 
         if (array == null) {
