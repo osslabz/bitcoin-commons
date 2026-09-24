@@ -1,5 +1,7 @@
 package net.osslabz.bitcoin;
 
+import java.util.HexFormat;
+import java.util.Objects;
 import org.bitcoinj.base.Address;
 import org.bitcoinj.base.AddressParser;
 import org.bitcoinj.base.Sha256Hash;
@@ -8,19 +10,11 @@ import org.bitcoinj.script.ScriptBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.HexFormat;
-import java.util.Objects;
-
-
 public class BitcoinUtils {
 
     private static final Logger log = LoggerFactory.getLogger(BitcoinUtils.class);
 
-
-    private BitcoinUtils() {
-
-    }
-
+    private BitcoinUtils() {}
 
     public static String convertAddressToReversedScriptHash(Network network, String addressString) {
 
@@ -30,7 +24,6 @@ public class BitcoinUtils {
         return convertAddressToReversedScriptHash(address);
     }
 
-
     public static String convertAddressToReversedScriptHash(Address address) {
 
         Script outputScript = toOutputScript(address);
@@ -39,12 +32,10 @@ public class BitcoinUtils {
         return HexFormat.of().formatHex(reversed);
     }
 
-
     public static Script toOutputScript(Address address) {
 
         return ScriptBuilder.createOutputScript(address);
     }
-
 
     public static byte[] reverseBytes(byte[] array) {
 
