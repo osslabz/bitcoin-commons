@@ -24,8 +24,6 @@
 
         <maven.compiler.release>${osslabz.java.version}</maven.compiler.release>
 
-        <lombok.version>1.18.48</lombok.version>
-
         <!-- Floors, not targets: measured coverage minus five points, capped at 0.90 line and
              0.75 branch, so noise doesn't trip the gate but a real regression does. -->
         <jacoco.min.line>0.90</jacoco.min.line>
@@ -280,11 +278,6 @@
                         <arg>-Werror</arg>
                     </compilerArgs>
                     <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>${lombok.version}</version>
-                        </path>
                         <path>
                             <groupId>com.google.errorprone</groupId>
                             <artifactId>error_prone_core</artifactId>
